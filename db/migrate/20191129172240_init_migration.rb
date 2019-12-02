@@ -19,7 +19,7 @@ class InitMigration < ActiveRecord::Migration[6.0]
       p.timestamps
     end
     create_table :sizes do |s|
-      s.string :type, :null => false
+      s.string :s_type, :null => false
       s.string :size, :null => false
       s.timestamps
     end
