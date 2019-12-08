@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  validates :name, :price, :size_id, presence: true
+  validates :name, :price, :currency, :s_type, :size, presence: true
   has_one :size
-  belongs_to :order_product
+  belongs_to :order
 end
