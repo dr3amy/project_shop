@@ -32,4 +32,3 @@ yarn-debug.log*
 
 /.idea
 /config/database.yml
-/db/seeds.rb
