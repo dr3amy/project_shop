@@ -18,43 +18,51 @@ end
 
 # seeding SIZES relation
 unless Size.find_by_size('5 US').present?
-  size1 = Size.create(s_type: 'MENS Footwear', size: '5 US')
+  size_5_us = Size.create(s_type: 'MENS Footwear', size: '5 US')
 end
 unless Size.find_by_size('6 US').present?
-  size2 = Size.create(s_type: 'MENS Footwear', size: '6 US')
+  size_6_us = Size.create(s_type: 'MENS Footwear', size: '6 US')
 end
 unless Size.find_by_size('7 US').present?
-  size3 = Size.create(s_type: 'MENS Footwear', size: '7 US')
+  size_7_us = Size.create(s_type: 'MENS Footwear', size: '7 US')
 end
 unless Size.find_by_size('8 US').present?
-  size4 = Size.create(s_type: 'MENS Footwear', size: '8 US')
+  size_8_us = Size.create(s_type: 'MENS Footwear', size: '8 US')
 end
 unless Size.find_by_size('9 US').present?
-  size5 = Size.create(s_type: 'MENS Footwear', size: '9 US')
+  size_9_us = Size.create(s_type: 'MENS Footwear', size: '9 US')
 end
 unless Size.find_by_size('10 US').present?
-  size6 = Size.create(s_type: 'MENS Footwear', size: '10 US')
+  size_10_us = Size.create(s_type: 'MENS Footwear', size: '10 US')
 end
 unless Size.find_by_size('11 US').present?
-  size7 = Size.create(s_type: 'MENS Footwear', size: '11 US')
+  size_11_us = Size.create(s_type: 'MENS Footwear', size: '11 US')
 end
 unless Size.find_by_size('12 US').present?
-  size8 = Size.create(s_type: 'MENS Footwear', size: '12 US')
+  size_12_us = Size.create(s_type: 'MENS Footwear', size: '12 US')
 end
 
 # seeding PRODUCTS relation
 unless Product.find_by_name('Nike Air Jordan 1 Retro High OG BLACK').present?
-  product1 = Product.create(name: 'Nike Air Jordan 1 Retro High OG BLACK',
+  product_1 = Product.create(name: 'Nike Air Jordan 1 Retro High OG BLACK',
                             s_type: 'MENS Footwear',
-                            size: '10 US',
+                            size: size_9_us,
                             price: 215,
                             currency: 'EU')
 end
-#unless Product.find_by_name('Nike Air Jordan 6 Retro PSG').present?
-  #product2 = Product.create(name: 'Nike Air Jordan 6 Retro PSG', size: '9 US')
-#end
+unless Product.find_by_name('Nike Air Jordan 11 Retro UNC WIN LIKE 82').present?
+  product_2 = Product.create(name: 'Nike Air Jordan 11 Retro UNC WIN LIKE 82',
+                             s_type: 'MENS Footwear',
+                             size: size_11_us,
+                             price: 213,
+                             currency: 'EU')
+end
 
 # seeding ORDERS relation
+order_1 = Order.create(user_id: 1)
+order_2 = Order.create(user_id: 2)
 
+#seeding ORDERS_PRODUCTS relation
+#orders_products_1 =
 
 
