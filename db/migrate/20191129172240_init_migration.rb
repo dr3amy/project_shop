@@ -27,7 +27,7 @@ class InitMigration < ActiveRecord::Migration[6.0]
       o.integer :user_id, :null => false
       o.timestamps
     end
-    create_table :order_products do |op|
+    create_table :orders_products do |op|
       op.integer :order_id, :null => false
       op.integer :product_id, :null => false
       op.timestamps

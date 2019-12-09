@@ -15,15 +15,15 @@ ActiveRecord::Schema.define(version: 2019_11_29_172240) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "order_products", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "product_id", null: false
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
+  create_table "orders_products", force: :cascade do |t|
+    t.integer "order_id", null: false
+    t.integer "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
