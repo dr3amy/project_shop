@@ -62,7 +62,6 @@ end
 order_1 = Order.create(user_id: 1)
 order_2 = Order.create(user_id: 2)
 
-#seeding ORDERS_PRODUCTS relation
-#orders_products_1 =
 
 
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
