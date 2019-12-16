@@ -59,8 +59,8 @@ unless Product.find_by_name('Nike Air Jordan 11 Retro UNC WIN LIKE 82').present?
 end
 
 # seeding ORDERS relation
-order_1 = Order.create(user_id: 1)
-order_2 = Order.create(user_id: 2)
+#order_1 = Order.create(user_id: 1)
+#order_2 = Order.create(user_id: 2)
 
 
 
