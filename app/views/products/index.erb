@@ -1,0 +1,9 @@
+<p>
+  <% @products.each do |p| %>
+    <%= p.name %>
+    <%= p.price %>
+    <%= p.currency %>
+    <%= p.size.size %>
+    <br>
+  <% end %>
+</p>

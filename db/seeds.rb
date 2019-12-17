@@ -59,10 +59,9 @@ unless Product.find_by_name('Nike Air Jordan 11 Retro UNC WIN LIKE 82').present?
 end
 
 # seeding ORDERS relation
-order_1 = Order.create(user_id: 1)
-order_2 = Order.create(user_id: 2)
-
-#seeding ORDERS_PRODUCTS relation
-#orders_products_1 =
+#order_1 = Order.create(user_id: 1)
+#order_2 = Order.create(user_id: 2)
 
 
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
