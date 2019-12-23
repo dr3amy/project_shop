@@ -1,8 +1,6 @@
 class InitMigration < ActiveRecord::Migration[6.0]
   def up
     create_table :users do |u|
-      u.string :email, :null => false
-      u.string :password, :null => false
       u.string :country, :null => false
       u.string :town, :null => false
       u.string :address_line1, :null => false
