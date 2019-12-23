@@ -8,12 +8,14 @@
 
 # seeding USERS relation
 unless User.find_by_email('user1@gmail.com').present?
-  user1 = User.create(email: 'user1@gmail.com', password: '123', country: 'Russian Federation',
-                      town: 'Rostov-on-Don', address_line1: 'Pushkinskaya 123', postcode: '123456')
+  user1 = User.create(country: 'Russian Federation', town: 'Rostov-on-Don',
+                      address_line1: 'Pushkinskaya 123', postcode: '123456',
+                      email: 'user1@gmail.com', encrypted_password: '123')
 end
 unless User.find_by_email('user2@gmail.com').present?
-  user2 = User.create(email: 'user2@gmail.com', password: '456', country: 'Russian Federation',
-                      town: 'Rostov-on-Don', address_line1: 'Pushkinskaya 456', postcode: '123456')
+  user2 = User.create(country: 'Russian Federation', town: 'Rostov-on-Don',
+                      address_line1: 'Pushkinskaya 456', postcode: '123456',
+                      email: 'user2@gmail.com', encrypted_password: '456')
 end
 
 # seeding SIZES relation
@@ -59,9 +61,11 @@ unless Product.find_by_name('Nike Air Jordan 11 Retro UNC WIN LIKE 82').present?
 end
 
 # seeding ORDERS relation
-#order_1 = Order.create(user_id: 1)
-#order_2 = Order.create(user_id: 2)
+order_1 = Order.create(user_id: 1)
+order_2 = Order.create(user_id: 2)
 
 
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+unless AdminUser.find_by_email('admin@example.com').present?
+  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+end
