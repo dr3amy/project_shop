@@ -33,3 +33,6 @@ yarn-debug.log*
 /.idea
 /config/database.yml
 /db/schema.rb
+/config/credentials.yml.enc
+/bin/rails
+/bin/rake
