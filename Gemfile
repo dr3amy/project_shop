@@ -54,5 +54,5 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
