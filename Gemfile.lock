@@ -295,7 +295,6 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.7)
   jquery-rails
-  omniauth
   omniauth-github
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)

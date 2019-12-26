@@ -1,0 +1,14 @@
+<div class="container text">
+  <p>
+    Your orders:
+    <br>
+    <% @orders.each do |o| %>
+      <%= o.id %>
+      <% o.products.each do |p| %>
+        <%= p.name %>
+      <% end %>
+      <br>
+    <% end %>
+
+  </p>
+</div>
