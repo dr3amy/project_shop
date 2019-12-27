@@ -125,5 +125,5 @@ Order.find_by_user_id(1).products.push(Product.first)
 Order.find_by_user_id(1).products.push(Product.second)
 
 unless AdminUser.find_by_email('admin@example.com').present?
-  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.production?
 end
