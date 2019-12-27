@@ -1,0 +1,23 @@
+<%= render partial: "shared/navbar" %>
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="card mt-4">
+        <img class="card-img-top img-fluid" src="<%= @product.img_link %>" alt="">
+        <div class="card-body">
+          <h3 class="card-title"><%= @product.name %></h3>
+          <h4>$<%= @product.price %></h4>
+          <p class="card-text"><%= @product.desc %></p>
+          <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+          4.0 stars
+        </div>
+      </div>
+    </div>
+    <!-- /.col-lg-9 -->
+  </div>
+</div>
+<!-- /.container -->
+
+
+<%= render partial: "shared/footer" %>

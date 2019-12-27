@@ -21,6 +21,7 @@ class InitMigration < ActiveRecord::Migration[6.0]
       p.float :price, :null => false
       p.string :currency, :null => false
       p.float :discount
+      p.text :img_link
       p.timestamps
     end
     create_table :orders do |o|

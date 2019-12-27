@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_211701) do
     t.float "price", null: false
     t.string "currency", null: false
     t.float "discount"
+    t.text "img_link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["size_id"], name: "index_products_on_size_id"

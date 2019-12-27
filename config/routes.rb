@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :products
+  get '/products/:id', to: 'products#show'
+
   resources :sizes, only: [:index]
 
   devise_for :users, :controllers => { :registrations => 'registrations', :omniauth_callbacks => "callbacks" }

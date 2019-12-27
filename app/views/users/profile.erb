@@ -1,5 +1,8 @@
+<%= render partial: "shared/navbar" %>
 <div class="container text">
+  <% if current_user %>
   <p>
+
     Your orders:
     <br>
     <% @orders.each do |o| %>
@@ -9,6 +12,13 @@
       <% end %>
       <br>
     <% end %>
+  <% else %>
+    Seems you are not signed in <br>
+    <%= link_to 'Sign in', new_user_session_path %>
+  <% end %>
 
   </p>
 </div>
+
+
+<%= render partial: "shared/footer" %>
