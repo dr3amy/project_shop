@@ -8,6 +8,13 @@
         <div class="card-body">
           <h3 class="card-title"><%= @product.name %></h3>
           <h4>$<%= @product.price %></h4>
+          <div class="form-group">
+            <label for="sel1">Select size:</label>
+            <select class="form-control" id="sel1">
+              <option><%= @product.size %></option>
+            </select>
+          </div>
+          <a class="btn btn-primary" href="#">Add to cart</a>
           <p class="card-text"><%= @product.desc %></p>
           <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
           4.0 stars
