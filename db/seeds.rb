@@ -116,6 +116,17 @@ One of those is this upcoming “Royal Tint” iteration. It features a Light Bl
   )
 end
 
+product_7 = Product.create(name: 'Nike React Element 87 Royal Tint',
+                           s_type: 'MENS Footwear',
+                           size: size_10_us,
+                           price: 160,
+                           currency: 'EU',
+                           img_link: 'https://sneakerbardetroit.com/wp-content/uploads/2019/01/Nike-React-Element-87-Royal-Tint-AQ1090-400-Release-Date-4.jpg',
+                           desc: 'Following a successful year in 2018, the Nike React Element 87 will be kicking off 2019 with a brand new lineup that includes a few eye-catching color options.
+
+One of those is this upcoming “Royal Tint” iteration. It features a Light Blue translucent upper with Wolf Grey overlays, Dark Green on the lace stay and Pink contrasting accents. A White React sole with translucent detailing and cork insoles completes the design.'
+)
+
 # seeding ORDERS relation
 order_1 = Order.create(user_id: 1, )
 order_2 = Order.create(user_id: 1)
