@@ -10,12 +10,12 @@
 unless User.find_by_email('user1@gmail.com').present?
   user1 = User.create(country: 'Russian Federation', town: 'Rostov-on-Don',
                       address_line1: 'Pushkinskaya 123', postcode: '123456',
-                      email: 'user1@gmail.com', encrypted_password: '123')
+                      email: 'user1@gmail.com', password: '123')
 end
 unless User.find_by_email('user2@gmail.com').present?
   user2 = User.create(country: 'Russian Federation', town: 'Rostov-on-Don',
                       address_line1: 'Pushkinskaya 456', postcode: '123456',
-                      email: 'user2@gmail.com', encrypted_password: '456')
+                      email: 'user2@gmail.com', password: '456')
 end
 
 # seeding SIZES relation
@@ -121,8 +121,8 @@ order_1 = Order.create(user_id: 1)
 order_2 = Order.create(user_id: 1)
 
 # seeding ORDERS_PRODUCTS
-Order.find_by_user_id(1).products.push(Product.first)
-Order.find_by_user_id(1).products.push(Product.second)
+#Order.find_by_user_id(1).products.push(Product.first)
+#Order.find_by_user_id(1).products.push(Product.second)
 
 unless AdminUser.find_by_email('admin@example.com').present?
   AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.production?

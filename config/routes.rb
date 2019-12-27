@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  get 'profile', to: 'users#profile'
+  get 'cart', to: 'users#cart'
+  get 'add_to_cart', to: 'users#add_to_cart'
 end
 
